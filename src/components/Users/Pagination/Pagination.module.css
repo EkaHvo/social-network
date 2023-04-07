@@ -1,0 +1,16 @@
+.pagination {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.pagination span {
+  cursor: pointer;
+  padding: 0.1rem;
+}
+
+.selectedPage {
+  font-weight: 900;
+  font-size: 1.2rem;
+}

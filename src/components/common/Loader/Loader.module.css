@@ -1,0 +1,35 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 3rem;
+  transform: translate(-50%, -50%);
+}
+
+.line {
+  width: .5rem;
+  position: absolute;
+  border-radius: 5px;
+  bottom: 0;
+  background-color: var(--colorGold);
+}
+
+.lineOne {
+  left: 0;
+  animation: loader .5s ease alternate infinite;
+}
+
+.lineTwo {
+  left: 1rem;
+  animation: loader .5s .2s ease alternate infinite;
+}
+
+.lineThree {
+  left: 2rem;
+  animation: loader .5s .4s ease alternate infinite;
+}
+
+@keyframes loader {
+  from { height: 0; }
+  to { height: 100%; }
+}

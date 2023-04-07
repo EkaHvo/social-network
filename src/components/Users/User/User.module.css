@@ -1,0 +1,10 @@
+.user a{
+  color: var(--mainColor);
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 10fr 1fr;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--boxShadowBlue);
+}

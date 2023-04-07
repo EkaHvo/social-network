@@ -1,0 +1,13 @@
+.message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--boxShadowBlue);
+  width: fit-content;
+}
+
+.message.right {
+  align-self: flex-end;
+}

@@ -1,0 +1,30 @@
+.input,
+.textarea {
+  background: var(--mainColor);
+  box-shadow: var(--boxShadowBlue);
+  color: var(--mainBlue);
+  font-family: var(--fontFamily);
+  line-height: 1rem;
+  border: none;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+.input {
+  border-radius: 30px;
+}
+
+.textarea {
+  border-radius: .5rem;
+  min-height: 5rem;
+  resize: none;
+  width: 100%;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}

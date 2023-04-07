@@ -1,0 +1,59 @@
+.header {
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--mainBlue);
+  box-sizing: border-box;
+  border-bottom: .1px solid var(--mainColor);
+  z-index: 100;
+}
+
+.content {
+  padding: .5rem 0;
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170px;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  max-width: 100px;
+  color: var(--mainColor);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.personal {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.exit {
+  height: 20px;
+  width: 30px;
+  display: block;
+  background: center / contain no-repeat url('../../assets/images/exit.svg');
+}

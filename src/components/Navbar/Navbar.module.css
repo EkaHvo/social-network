@@ -1,0 +1,5 @@
+.navbar {
+  width: 20%;
+  padding: 1rem 1rem 1rem 0;
+  background-color: var(--mainBlue);
+}

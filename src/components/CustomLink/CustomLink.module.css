@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  display: block;
+  color: var(--mainColor);
+}
+
+.activeLink {
+  color: var(--colorGold);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
