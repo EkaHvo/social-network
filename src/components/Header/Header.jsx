@@ -1,6 +1,7 @@
 import Avatar from '../Avatar/Avatar';
 import Button from '../Button/Button';
 import CustomLink from '../CustomLink/CustomLink';
+import logo from '../../assets/images/logo.png';
 import cls from './Header.module.css';
 
 const Header = (props) => {
@@ -10,7 +11,7 @@ const Header = (props) => {
     <header className={cls.header}>
       <div className={cls.content}>
         <div className={cls.logo}>
-          <img className={cls.img} src='../../images/logo.png' alt='logo'></img>
+          <img className={cls.img} src={logo} alt='logo'></img>
           <h1 className={cls.title}>Cosmos network</h1>
         </div>
         {
