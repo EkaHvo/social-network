@@ -2,7 +2,7 @@ export const TEST_AVATAR_SRC = 'https://i.pinimg.com/originals/1b/8c/4a/1b8c4a21
 export const TEST_AVATAR_SRC2 = 'https://klike.net/uploads/posts/2020-04/1587719791_1.jpg';
 
 export const BASE_URL = 'https://social-network.samuraijs.com/api/1.0/';
-export const API_KEY = 'ff53eced-7139-45b0-a360-93397b47f3be';
+export const API_KEY = '669b75a1-5e06-435f-8671-27f3061dae5f';
 
 export const mockDialogs = [
   { id:1, name: 'Lena', avatar: TEST_AVATAR_SRC},
