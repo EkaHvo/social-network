@@ -19,7 +19,7 @@
 
 .ownerCover {
   height: 20rem;
-  background: linear-gradient(90deg, rgba(6,0,42,1) 0%, rgba(255,252,5,1) 100%);;
+  background: var(--profileBackgroundGradient);
 }
 
 .ownerCoverAvatar {

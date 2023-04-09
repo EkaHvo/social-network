@@ -6,11 +6,12 @@
 
 :root {
   --mainColor: #ffffff;
-  --colorGold: gold;
+  --colorGold: rgb(241, 172, 70);
   --colorGreen: rgb(132, 230, 132);
   --mainBlue:#06002a;
   --middleBlue: #35314a;
   --lightBlue: rgba(0, 160, 225);
   --boxShadowBlue: 0px 3px 10px 0px rgba(0, 160, 225, 0.7); 
   --boxShadowInsetBlue: inset 0px 3px 10px 0px rgba(0, 160, 225, 0.7); 
+  --profileBackgroundGradient: linear-gradient(90deg, rgba(6,0,42,1) 0%, rgba(241, 172, 70) 100%);
 }
