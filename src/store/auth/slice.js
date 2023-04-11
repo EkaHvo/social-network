@@ -9,6 +9,10 @@ const authSlice = createSlice({
       login: null,
       email: null,
     },
+    photos: {
+      small: null,
+      large: null
+    },
     isAuth: false,
     isAuthLoading: false,
   },
@@ -17,11 +21,18 @@ const authSlice = createSlice({
       state.user = payload;
       state.isAuth = true;
     },
+    setUserPhotos(state, { payload }){
+      state.photos = payload.photos;
+    },
     deleteUser(state){
       state.user = {
         id: null,
         login: null,
         email: null,
+        photos: {
+          small: null,
+          large: null
+        }
       };
       state.isAuth = false;
     },
@@ -37,6 +48,6 @@ const authSlice = createSlice({
   }
 });
 
-export const {setUser, deleteUser} = authSlice.actions;
+export const {setUser, deleteUser, setUserPhotos} = authSlice.actions;
 
 export const authReducer = authSlice.reducer;

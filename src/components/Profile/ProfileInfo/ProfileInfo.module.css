@@ -7,7 +7,7 @@
   background-color: var(--mainColor);
   font-weight: 700;
   display: flex;
-  align-items: center;
+  align-items: end;
   min-height: 2rem;
   width: 100%;
   bottom: 0;
@@ -23,6 +23,7 @@
 }
 
 .ownerCoverAvatar {
+  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;

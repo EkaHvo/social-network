@@ -1,7 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { stopSubmit } from "redux-form";
+import { getProfile } from "../profile/api";
 import { deleteAuth, getAuth, postAuth } from "./api";
-import { deleteUser, setUser } from "./slice";
+import { deleteUser, setUser, setUserPhotos } from "./slice";
 
 export const login = createAsyncThunk(
   'login',
@@ -42,10 +43,12 @@ export const setIsAuth = createAsyncThunk(
   'auth',
   async (_, { rejectWithValue, dispatch }) => {
     try {
-      let {data, resultCode} = await getAuth();
+      const { data, resultCode } = await getAuth();
       if(resultCode !== 0){
         throw new Error('Auth error');
       } else {
+        const photos = await getProfile(data.id);
+        dispatch(setUserPhotos(photos));
         dispatch(setUser(data))
       }
     } catch (err) {

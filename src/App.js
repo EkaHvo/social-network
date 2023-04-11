@@ -9,7 +9,7 @@ import Loader from './components/common/Loader/Loader';
 
 const App = () => {
   const { isInitialized } = useSelector(state => state.app);
-  const { user, isAuth } = useSelector(state => state.auth);
+  const { user, isAuth, photos } = useSelector(state => state.auth);
   const dispatch = useDispatch();
   
   useEffect(()=>{   
@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <div className='app-wrapper'>
-      <HeaderContainer user={user} isAuth={isAuth}/>
+      <HeaderContainer user={user} isAuth={isAuth} photo={photos.small}/>
       <div className='app-wrapper-content'>
         { isAuth && <Navbar /> }
         <div className='app-inside-content'>

@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.png';
 import cls from './Header.module.css';
 
 const Header = (props) => {
-  const { login, isAuth, onLogout } = props;
+  const { login, isAuth, onLogout, photo } = props;
 
   return (
     <header className={cls.header}>
@@ -20,7 +20,7 @@ const Header = (props) => {
             <div className={cls.personal}>
                 <CustomLink to={`/profile`} classname='flex'>
                   <div>{ login }</div>
-                  <Avatar title='my avatar'/>
+                  <Avatar title='my avatar' src={photo}/>
                 </CustomLink>
               <Button onClick={onLogout}>
                   <span className={cls.exit}></span>

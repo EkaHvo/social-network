@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { setProfile, setStatus, updateStatus } from "./action";
+import { savePhoto, setProfile, setStatus, updateStatus } from "./action";
 
 const profileSlice = createSlice({
   name: 'profile',
@@ -14,6 +14,7 @@ const profileSlice = createSlice({
     },
     status: null,
     posts: [],
+    isProfileLoading: false,
   },
   reducers: {
     addPost(state, { payload }){
@@ -37,6 +38,28 @@ const profileSlice = createSlice({
       .addCase(setProfile.fulfilled,
         (state, { payload }) => {
           state.profile = payload;
+          state.isProfileLoading = false;
+      })
+      .addCase(setProfile.pending,
+        (state) => {
+          state.isProfileLoading = true;
+      })
+      .addCase(setProfile.rejected,
+        (state) => {
+          state.isProfileLoading = false;
+      })
+      .addCase(savePhoto.fulfilled,
+        (state, { payload }) => {
+          state.profile.photos = payload.photos;
+          state.isProfileLoading = false;
+      })
+      .addCase(savePhoto.pending,
+        (state) => {
+          state.isProfileLoading = true;
+      })
+      .addCase(savePhoto.rejected,
+        (state) => {
+          state.isProfileLoading = false;
       })
       .addCase(setStatus.fulfilled,
         (state, { payload }) => {

@@ -3,7 +3,7 @@ import { logout } from "../../store/auth/action";
 import Header from "./Header";
 
 const HeaderContainer = (props) => {
-  const { user, isAuth } = props;
+  const { user, isAuth, photo } = props;
 
   const dispatch = useDispatch();
   const onLogout = () => {
@@ -14,6 +14,7 @@ const HeaderContainer = (props) => {
     <Header 
       login={user.login} 
       isAuth={isAuth} 
+      photo={photo}
       onLogout={onLogout}/>
   );
 }

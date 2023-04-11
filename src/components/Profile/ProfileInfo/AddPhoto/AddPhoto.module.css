@@ -1,0 +1,33 @@
+.inputWrapper {
+	position: absolute;
+	display: inline-block;
+}
+
+.inputLabel {
+  font-weight: 400;
+  font-family: var(--fontFamily);
+  background-color: var(--mainBlue);
+  color: var(--mainColor);
+  padding: .5rem .7rem;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--boxShadowBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputFile {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+  
+.inputWrapper:hover .inputLabel {
+  box-shadow: var(--boxShadowInsetBlue); 
+}
+ 

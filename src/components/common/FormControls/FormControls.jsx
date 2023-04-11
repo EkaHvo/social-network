@@ -14,7 +14,7 @@ export const Input = ({ input, meta, typeComponent, ...restProps }) => {
     <>
       {
         ( typeComponent === 'textarea' && <textarea {...input} {...restProps} className={classNames}/> ) ||
-        ( typeComponent === 'input' && <input {...input} {...restProps} className={classNames}/> )
+        ( typeComponent === 'input' && <input {...input} {...restProps} className={classNames}/> ) 
       }
       { hasError && <span className={cls.error}>{error}</span> }
       { hasWarn && <span className={cls.warning}>{warning}</span> }

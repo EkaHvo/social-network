@@ -15,4 +15,6 @@ const AddPostForm = ({handleSubmit}) => {
   )
 }
 
-export const AddPostReduxForm = reduxForm({form: 'addPost'})(AddPostForm);
+export const AddPostReduxForm = reduxForm({
+  form: 'addPost'
+})(AddPostForm);

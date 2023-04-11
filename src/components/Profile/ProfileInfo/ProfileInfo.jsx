@@ -1,9 +1,10 @@
 import Avatar from '../../Avatar/Avatar';
+import { AddPhotoInput } from './AddPhoto/AddPhoto';
 import ProfileStatus from '../ProfileStatus/ProfileStatus';
 import cls from './ProfileInfo.module.css';
 
 const ProfileInfo = (props) => {
-  const { fullName, avatar, status, onStatusChange, isOwner } = props;
+  const { fullName, avatar, status, onStatusChange, isOwner, onAddPhoto } = props;
 
   return (
     <div className={cls.profileHeader}>
@@ -12,6 +13,7 @@ const ProfileInfo = (props) => {
         <div className={cls.ownerCoverAvatar}>
           <Avatar src={avatar}/>
         </div>
+        { isOwner ?	<AddPhotoInput onAddPhoto={onAddPhoto}/> : null}
         <div className={cls.ownerInfo}>
           <div>{fullName}</div>
           <ProfileStatus 

@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getProfile, getStatus, putStatus } from "./api";
+import { setUserPhotos } from "../auth/slice";
+import { getProfile, getStatus, postPhoto, putStatus } from "./api";
 
 export const setProfile = createAsyncThunk(
   'profile/get',
@@ -34,6 +35,22 @@ export const updateStatus = createAsyncThunk(
         throw new Error('Auth error');
       }
       return status;
+    } catch (err) {
+      return rejectWithValue([], err);
+    }
+  }
+)
+
+export const savePhoto = createAsyncThunk(
+  'profile/savePhoto',
+  async (file, { rejectWithValue, dispatch }) => {
+    try {
+      const { data, resultCode } = await postPhoto(file);
+      if(resultCode !== 0){
+        throw new Error('Auth error');
+      }
+      dispatch(setUserPhotos(data));
+      return data;
     } catch (err) {
       return rejectWithValue([], err);
     }
