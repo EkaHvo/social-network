@@ -10,7 +10,7 @@ export const AddPhotoInput = ({ onAddPhoto }) => {
   return (
     <label className={cls.inputWrapper}>
       <input className={cls.inputFile} type='file' onChange={onOwnerAvatarChange}/>		
-      <span className={cls.inputLabel}>	&#9998;</span>
+      <span className={cls.inputLabel}>&#9998;</span>
     </label>
   )
 }

@@ -3,6 +3,9 @@
   margin: 0 auto;
   max-width: 100%;
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination span {

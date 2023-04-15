@@ -1,0 +1,11 @@
+.profileExtraInfo {
+  padding: 1.5rem;
+  background-color: var(--mainColor);
+  color: var(--mainBlue);
+}
+.contacts {
+  padding: 1rem 0;
+}
+.contact {
+  padding: .3rem 0;
+}

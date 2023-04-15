@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { savePhoto, setProfile, setStatus, updateStatus } from "./action";
+import { savePhoto, setProfile, setStatus, updateProfile, updateStatus } from "./action";
 
 const profileSlice = createSlice({
   name: 'profile',
@@ -10,7 +10,20 @@ const profileSlice = createSlice({
         small: null,
         large: null,
       },
-      fullName: ''
+      fullName: '',
+      aboutMe: null,
+      lookingForAJob: null,
+      lookingForAJobDescription: null,
+      contacts: {
+        facebook: null,
+        website: null,
+        vk: null,
+        twitter: null,
+        instagram: null,
+        youtube: null,
+        github: null,
+        mainLink: null
+      }
     },
     status: null,
     posts: [],
@@ -47,6 +60,10 @@ const profileSlice = createSlice({
       .addCase(setProfile.rejected,
         (state) => {
           state.isProfileLoading = false;
+      })
+      .addCase(updateProfile.fulfilled,
+        (state, { payload }) => {
+          state.profile = {...state.profile, ...payload};
       })
       .addCase(savePhoto.fulfilled,
         (state, { payload }) => {

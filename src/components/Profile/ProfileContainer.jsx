@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";
 import { reset } from 'redux-form';
-import { savePhoto, setProfile, setStatus, updateStatus } from '../../store/profile/action';
+import { savePhoto, setProfile, setStatus, updateProfile, updateStatus } from '../../store/profile/action';
 import { addPost, deletePost } from '../../store/profile/slice';
 import Loader from '../common/Loader/Loader';
 import Profile from './Profile';
@@ -21,6 +21,10 @@ const ProfileContainer = () => {
 
   const onAddPhoto = (file) => {
     dispatch(savePhoto(file));
+  }
+
+  const onEditProfile = (data) => {
+    dispatch(updateProfile(data));
   }
 
   const onDeletePost = (id) => {
@@ -46,6 +50,7 @@ const ProfileContainer = () => {
               status={status}
               isOwner={userId === user.id}
               onStatusChange={onStatusChange}
+              onEditProfile={onEditProfile}
               onAddPhoto={onAddPhoto}
               onAddPost={onAddPost}
               onDeletePost={onDeletePost}

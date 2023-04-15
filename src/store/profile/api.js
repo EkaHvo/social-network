@@ -4,6 +4,10 @@ export const getProfile = async(id) => {
   return axiosInstance.get(`profile/${id}`).then(response => response.data);
 }
 
+export const putProfile = async(data) => {
+  return axiosInstance.put(`profile`, data).then(response => response.data);
+}
+
 export const getStatus = async(id) => {
   return axiosInstance.get(`profile/status/${id}`).then(response => response.data);
 }

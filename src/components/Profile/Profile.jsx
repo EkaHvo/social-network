@@ -4,7 +4,7 @@ import Loader from '../common/Loader/Loader';
 import {AddPostReduxForm as AddPost} from './Posts/AddPost.tsx/AddPost';
 
 const Profile = (props) => {
-  const { profile, status, posts, onAddPost, onDeletePost, isOwner, onStatusChange, onAddPhoto } = props;
+  const { profile, status, posts, onAddPost, onDeletePost, isOwner, onStatusChange, onAddPhoto, onEditProfile } = props;
 
   if(!profile) {
     return <Loader/>
@@ -12,12 +12,12 @@ const Profile = (props) => {
     return (
       <>
         <ProfileInfo 
-          fullName={profile.fullName}
-          avatar={profile.photos.small}
           status={status}
           isOwner={isOwner}
           onAddPhoto={onAddPhoto}
-          onStatusChange={onStatusChange}/>
+          onStatusChange={onStatusChange}
+          onEditProfile={onEditProfile}
+          profile={profile}/>
         { isOwner ? <AddPost onSubmit={onAddPost}/> : null }
         <Posts posts={posts} onDeletePost={onDeletePost}/>
       </>

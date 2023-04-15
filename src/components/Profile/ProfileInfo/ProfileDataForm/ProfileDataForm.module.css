@@ -1,0 +1,9 @@
+.contact {
+  display: flex;
+  padding: .3rem 0;
+  gap: 1rem;
+}
+
+.contact div {
+  flex: 1 0;
+}
